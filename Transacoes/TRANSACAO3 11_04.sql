@@ -1,0 +1,11 @@
+#TRANSAÇÃO QUE APAGUE DETERMINADO VINCULO DE CONTA E A RESPECTIVA CONTA
+
+SELECT * FROM contavinculada;
+BEGIN;
+	
+	DELETE FROM contavinculada WHERE conta_idCONTA = 3 ;
+	DELETE FROM conta WHERE idConta = 2 ;
+COMMIT;
+ROLLBACK;
+SELECT * FROM contavinculada;
+SELECT * FROM conta;
